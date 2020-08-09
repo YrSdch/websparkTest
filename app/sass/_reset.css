@@ -1,0 +1,57 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 10px;
+}
+
+h1, h2, h3{
+	margin: 0;
+}
+ ul{
+ 	list-style: none;
+ 	margin-bottom: 0;
+ }
+a, a:focus, a:hover, button:focus, button:focus{
+	text-decoration: none!important;
+	outline: none;
+}
+img{
+	max-width: 100%;
+}
+p{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.ytp-playlist-menu-button .ytp-button{
+	display: none;
+}
+.df{display: flex;}
+.fd_row{flex-direction: row;}
+.fd_col{flex-direction: column;}
+.al_it{align-items: flex-end;}
+
+span{
+	display: inline-block;
+}
+button{
+	outline: none;
+	border: none;
+	background: transparent;
+	cursor: pointer;}
+h1
+	{margin: 0;}
+html
+	{overflow-x: hidden;}
+body
+	{overflow-x: hidden;
+		position: relative;}
+input
+	{border: rgba(0,0,0, 0);
+		outline: none;}
+input:focus{
+		border: rgba(0,0,0, 0);}
+input:focus
+	{outline: none;}
