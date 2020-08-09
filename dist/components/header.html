@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="container">
     <div class="header-container">
-      <section class="heade__logo">
+      <section class="heade__logo sm-hide">
         <picture>
           <source srcset="images/Logo.webp" type="image/webp">
             <img src="images/Logo.png">
@@ -9,16 +9,25 @@
       </section>
       <section class="header__info">
         <div class="header__row">
-          <h1 class="header__title color-dark">monblanproject</h1>	<span class="header__start color-blue">Start on <time datetime="2016-02-17">17-02-2016</time></span>
+          <section class="heade__logo sm-show">
+            <picture>
+              <source srcset="images/Logo.webp" type="image/webp">
+                <img src="images/Logo.png">
+            </picture>
+          </section>
+          <h1 class="header__title color-dark">monblanproject</h1>
+          <button class="header__start color-blue">Start on
+            <time datetime="2016-02-17">17-02-2016</time>
+          </button>
         </div>
         <div class="header__row">	<span class="header__stats">
 						<span class="nova-bold">870 </span>posts</span>	<span class="header__stats">
 						<span class="nova-bold">11,787 </span>followers</span>	<span class="header__stats">
 						<span class="nova-bold">112 </span>following</span>
         </div>
-        <div class="date-pick">
+        <div class="date-pick">	<span>Date</span>
           <div class="relative">
-            <label for="from">Date
+            <label for="from">
               <input type="text" id="from" name="from" placeholder="from">	<span class="calendar-ic  bg-grey  btn">
 								<picture><source srcset="images/ic_date.webp" type="image/webp"><img src="images/ic_date.png"></picture>
 							</span>
