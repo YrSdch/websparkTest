@@ -1,28 +1,62 @@
-<a href="#" class="main__card">
+<section href="#" class="main__card">
 	<img src="images/camera.png" class="main__card-top-btn @@topBtnClass"></img>
-	<section class="main__card-img">
+	<a href="#" class="main__card-img">
 		<img src="@@imgUrl" class="img">
-	</section>
-	<section class="main__stats color-white">
+	</a>
+	<section class="main__stats">
 		<div class="main__stats-row">
 			<span class="main__stats-col main__stats-day nova17">@@firstDate</span>
 			<span class="main__stats-col main__stats-like nova-bold nova17">
-				<img class="icon" src="@@firstLikeIconUrl">
+				<span class="icon list-hide">
+					@@if (firstLikeIcon === 'heart') {
+					  @@include('heart.svg')
+					}
+					@@if (firstLikeIcon === 'play') {
+					  @@include('play.svg')
+					}
+				</span>
+				<span class="icon list-show">
+					@@include('heart.svg')
+				</span>
 				<span>@@firstLike</span>
 			</span>
 			<span class="main__stats-col main__stats-posts nova-bold nova17">
-				<img class="icon" src="@@firstPostIconUrl">
+				<span class="icon list-hide">
+					@@if (firstPostIcon === 'comment') {
+						  @@include('ic_comment.svg')
+						}
+				</span>
+				<span class="icon list-show">
+					 @@include('ic_comment.svg')
+				</span>
 				<span>@@firstPost</span>
 			</span>
 		</div>
 		<div class="main__stats-row">
 			<span class="main__stats-col nova17-sb"><time datetime="@@secondDateTime">@@secondDate</time></span>
 			<span class="main__stats-col main__stats-like  nova-bold nova17">
-				<img class="icon" src="@@secondLikeIconUrl">
+				<span class="icon list-hide">
+						@@if (secondLikeIcon === 'heart') {
+						  @@include('heart.svg')
+						}
+						@@if (secondLikeIcon === 'play') {
+						  @@include('play.svg')
+						}
+				</span>
+				<span class="icon list-show">
+					@@include('heart.svg')
+				</span>
 				<span>@@secondLike</span>
 			</span>
 			<span class="main__stats-col main__stats-posts  nova-bold nova17">
-				<img class="icon" src="@@secondPostIconUrl">
+				<span class="icon list-hide">
+					@@if (secondPostIcon === 'comment') {
+						  @@include('ic_comment.svg')
+						}
+				</span>
+				<span class="icon list-show">
+					 @@include('ic_comment.svg')
+				</span>
 				<span>@@secondPost</span>
 			</span>
 		</div>
@@ -33,4 +67,4 @@
 			</span>
 		</div>
 	</section>
-</a>
+</section>
