@@ -26,7 +26,9 @@ main
 	align-content: stretch
 	justify-content: space-between
 	&.grid-view
-		.main__stats-row
+		.list-show
+			display: none
+	.main__stats-row
 			svg
 				fill: #fff
 	&.list-view
@@ -69,6 +71,8 @@ main
 			.main__stats-load
 				span
 					margin-bottom: 5px
+			svg
+				fill: #000
 		.main__stats-col
 			time
 				margin-bottom: 6px

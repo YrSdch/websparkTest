@@ -1930,7 +1930,11 @@ main:before {
           justify-content: space-between;
 }
 
-.main__content.grid-view .main__stats-row svg {
+.main__content.grid-view .list-show {
+  display: none;
+}
+
+.main__content .main__stats-row svg {
   fill: #fff;
 }
 
@@ -2006,6 +2010,10 @@ main:before {
 
 .main__content.list-view .main__stats-row .main__stats-load span {
   margin-bottom: 5px;
+}
+
+.main__content.list-view .main__stats-row svg {
+  fill: #000;
 }
 
 .main__content.list-view .main__stats-col time {
