@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var listTypeView = document.querySelectorAll('.list-type');
   var mainContent = document.querySelector('.main__content');
+  var dataPickBtmClose = document.querySelectorAll('.date-pick .close');
   $(function () {
-    var dateFormat = "mm/dd/yy",
+    var dateFormat = "dd_mm_yy",
         from = $("#from").datepicker({
       defaultDate: "+1w",
       changeMonth: true,
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return date;
     }
   });
-
+  $(".ui-datepicker-trigger").removeAttr("title");
   function checkClass(elem, className) {
     if (elem.classList.contains(className)) {
       return true;
@@ -70,6 +71,11 @@ document.addEventListener('DOMContentLoaded', function () {
           mainContent.classList.remove('list-view');
         }
       }
+    });
+  });
+  dataPickBtmClose.forEach(function (elem) {
+    elem.addEventListener('click', function (e) {
+      e.target.closest('.relative').querySelector('input').value = '';
     });
   });
 });

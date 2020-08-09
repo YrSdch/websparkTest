@@ -2,13 +2,14 @@ document.addEventListener('DOMContentLoaded', function(){
 	@@include('convertToWebP.js')
   var listTypeView = document.querySelectorAll('.list-type')
   var mainContent = document.querySelector('.main__content')
+  var dataPickBtmClose = document.querySelectorAll('.date-pick .close')
 	$( function() {
-    var dateFormat = "mm/dd/yy",
+    var dateFormat = "dd_mm_yy",
       from = $( "#from" )
         .datepicker({
           defaultDate: "+1w",
           changeMonth: true,
-          numberOfMonths: 1
+          numberOfMonths: 1,
         })
         .on( "change", function() {
           to.datepicker( "option", "minDate", getDate( this ) );
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
       to = $( "#to" ).datepicker({
         defaultDate: "+1w",
         changeMonth: true,
-        numberOfMonths: 1
+        numberOfMonths: 1,
       })
       .on( "change", function() {
         from.datepicker( "option", "maxDate", getDate( this ) );
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
       return date;
     }
   } )
-	 
+	 $(".ui-datepicker-trigger").removeAttr("title")
   function checkClass(elem, className){
     if(elem.classList.contains(className)){
       return true
@@ -60,7 +61,11 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     })
   })
-  
+  dataPickBtmClose.forEach(function(elem){
+    elem.addEventListener('click', function(e){
+      e.target.closest('.relative').querySelector('input').value = ''
+    })
+  })
 
 
 });
