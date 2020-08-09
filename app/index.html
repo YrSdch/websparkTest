@@ -2,16 +2,204 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>monblanproject</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
-<body>
-	<img src="images/preview.jpg">
+<body class="monbl">
+	<section class="site-top">
+			@@include('components/header.html')
+	</section>
+	<section class="bg-light">
+		<main>
+			<div class="container relative z-index10">
+				<section class="main__top">
+					<button class="view-plate active">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 267.574 267.573"><path d="M74.198 1.534H8.818C3.954 1.534 0 5.473 0 10.343v65.461c0 4.873 3.954 8.818 8.818 8.818h65.38a8.813 8.813 0 008.83-8.818V10.343a8.807 8.807 0 00-8.83-8.809zM74.198 91.474H8.818c-4.864 0-8.818 3.939-8.818 8.81v65.477c0 4.869 3.954 8.814 8.818 8.814h65.38c4.891 0 8.83-3.945 8.83-8.814v-65.477a8.811 8.811 0 00-8.83-8.81zM74.198 184.458H8.818c-4.864 0-8.818 3.939-8.818 8.81v65.482c0 4.869 3.954 8.814 8.818 8.814h65.38c4.891 0 8.83-3.945 8.83-8.814v-65.482a8.811 8.811 0 00-8.83-8.81zM166.483.009h-65.395c-4.864 0-8.818 3.945-8.818 8.815v65.47c0 4.87 3.954 8.815 8.818 8.815h65.395c4.864 0 8.821-3.945 8.821-8.815V8.818c-.012-4.87-3.957-8.809-8.821-8.809zM166.483 89.949h-65.395c-4.864 0-8.818 3.948-8.818 8.818v65.462c0 4.869 3.954 8.814 8.818 8.814h65.395c4.864 0 8.821-3.945 8.821-8.814V98.767c-.012-4.87-3.957-8.818-8.821-8.818zM166.483 182.939h-65.395c-4.864 0-8.818 3.944-8.818 8.814v65.465c0 4.875 3.954 8.814 8.818 8.814h65.395c4.864 0 8.821-3.939 8.821-8.814v-65.465c-.012-4.869-3.957-8.814-8.821-8.814zM258.747.015h-65.374c-4.864 0-8.821 3.948-8.821 8.818v65.461c0 4.876 3.957 8.815 8.821 8.815h65.38c4.864 0 8.821-3.939 8.821-8.815V8.833c-.012-4.879-3.963-8.818-8.827-8.818zM258.747 89.967h-65.374c-4.864 0-8.821 3.942-8.821 8.818v65.461c0 4.87 3.957 8.809 8.821 8.809h65.38c4.864 0 8.821-3.938 8.821-8.809V98.785c-.012-4.876-3.963-8.818-8.827-8.818zM258.747 182.945h-65.374c-4.864 0-8.821 3.945-8.821 8.82v65.465c0 4.869 3.957 8.809 8.821 8.809h65.38c4.864 0 8.821-3.939 8.821-8.809v-65.465c-.012-4.874-3.963-8.82-8.827-8.82z"/></svg>
+					</button>
+					<button class="view-row">
+						<svg data-name="Capa 1" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264.63 263.55"><path d="M67.14 0H8.87C4.53 0 1.01 2.5 1.01 5.59V47.1c0 3.09 3.52 5.59 7.86 5.59h58.27c4.36 0 7.88-2.5 7.88-5.59V5.59C75.01 2.5 71.5 0 67.14 0zM258.41.28L96.28.44c-5.82 0-6 .48-6 5.41v41.49c0 3.08-1.59 5.58 5 5.58l161.87.21c7.34 0 7.46-2.71 7.46-5.79V5.87c-.03-3.09.88-5.43-6.2-5.59zM66.64 210.44H8.36c-4.33 0-7.86 2.49-7.86 5.58v41.51c0 3.09 3.53 5.59 7.86 5.59h58.28c4.36 0 7.87-2.5 7.87-5.59v-41.52c-.01-3.09-3.5-5.57-7.87-5.57zM257.9 210.71l-162.13.17c-5.82 0-6 .48-6 5.41v41.47c0 3.09-1.59 5.58 5 5.58l161.88.21c7.33 0 7.46-2.7 7.46-5.79v-41.47c-.04-3.08.9-5.41-6.21-5.58zM66.13 105.44H7.86c-4.34 0-7.85 2.53-7.85 5.61v41.51c0 3.09 3.52 5.6 7.86 5.6h58.26c4.36 0 7.87-2.51 7.87-5.6v-41.51c.01-3.09-3.51-5.61-7.87-5.61zM257.39 105.75l-162.13.17c-5.81 0-6 .48-6 5.41v41.47c0 3.09-1.59 5.58 5 5.58l161.88.21c7.33 0 7.46-2.7 7.46-5.79v-41.47c-.04-3.08.88-5.41-6.21-5.58z"/></svg>
+					</button>
+				</section>
+				<section class="main__content">
+					@@include('components/main-card.html',{
+						imgUrl: 'images/block1.png',
+						topBtnClass: 'hide',
+						firstDate: 'Today',
+						firstLike: '128',
+						firstPost: '31',
+						firstLikeIconUrl: 'images/ic_favorite.png',
+						firstPostIconUrl: 'images/ic_mode_comment.png',
+						secondDate: '9-08-2016',
+						secondDateTime: '2016-08-09',
+						secondLike: '67',
+						secondPost: '22',
+						secondLikeIconUrl: 'images/ic_favorite.png',
+						secondPostIconUrl: 'images/ic_mode_comment.png',
+						thirdName: 'image upload: ',
+						thirdDate: '11-04-2016',
+						thirdDateTime: '2016-04-11'
+					})
+					@@include('components/main-card.html',{
+						imgUrl: 'images/block2.png',
+						topBtnClass: 'hide',
+						firstDate: 'Today',
+						firstLike: '12,800',
+						firstPost: '31,100',
+						firstLikeIconUrl: 'images/ic_favorite.png',
+						firstPostIconUrl: 'images/ic_mode_comment.png',
+						secondDate: '9-08-2016',
+						secondDateTime: '2016-08-09',
+						secondLike: '67',
+						secondPost: '22',
+						secondLikeIconUrl: 'images/ic_favorite.png',
+						secondPostIconUrl: 'images/ic_mode_comment.png',
+						thirdName: 'image upload: ',
+						thirdDate: '11-04-2016',
+						thirdDateTime: '2016-04-11'
+					})
+					@@include('components/main-card.html',{
+						imgUrl: 'images/block3.png',
+						topBtnClass: 'show',
+						firstDate: 'Today',
+						firstLike: '128',
+						firstPost: '31',
+						firstLikeIconUrl: 'images/ic_favorite.png',
+						firstPostIconUrl: 'images/ic_mode_comment.png',
+						secondDate: '9-08-2016',
+						secondDateTime: '2016-08-09',
+						secondLike: '67',
+						secondPost: '22',
+						secondLikeIconUrl: 'images/ic_play.png',
+						secondPostIconUrl: 'images/ic_mode_comment.png',
+						thirdName: 'image upload: ',
+						thirdDate: '11-04-2016',
+						thirdDateTime: '2016-04-11'
+					})
+					@@include('components/main-card.html',{
+						imgUrl: 'images/block4.png',
+						topBtnClass: 'hide',
+						firstDate: 'Today',
+						firstLike: '128',
+						firstPost: '31',
+						firstLikeIconUrl: 'images/ic_favorite.png',
+						firstPostIconUrl: 'images/ic_mode_comment.png',
+						secondDate: '9-08-2016',
+						secondDateTime: '2016-08-09',
+						secondLike: '67',
+						secondPost: '22',
+						secondLikeIconUrl: 'images/ic_favorite.png',
+						secondPostIconUrl: 'images/ic_mode_comment.png',
+						thirdName: 'image upload: ',
+						thirdDate: '11-04-2016',
+						thirdDateTime: '2016-04-11'
+					})
+					@@include('components/main-card.html',{
+						imgUrl: 'images/block5.png',
+						topBtnClass: 'show',
+						firstDate: 'Today',
+						firstLike: '128',
+						firstPost: '31',
+						firstLikeIconUrl: 'images/ic_play.png',
+						firstPostIconUrl: 'images/ic_mode_comment.png',
+						secondDate: '9-08-2016',
+						secondDateTime: '2016-08-09',
+						secondLike: '67',
+						secondPost: '22',
+						secondLikeIconUrl: 'images/ic_play.png',
+						secondPostIconUrl: 'images/ic_mode_comment.png',
+						thirdName: 'image upload: ',
+						thirdDate: '11-04-2016',
+						thirdDateTime: '2016-04-11'
+					})
+					@@include('components/main-card.html',{
+						imgUrl: 'images/block6.png',
+						topBtnClass: 'hide',
+						firstDate: 'Today',
+						firstLike: '128',
+						firstPost: '31',
+						firstLikeIconUrl: 'images/ic_favorite.png',
+						firstPostIconUrl: 'images/ic_mode_comment.png',
+						secondDate: '9-08-2016',
+						secondDateTime: '2016-08-09',
+						secondLike: '67',
+						secondPost: '22',
+						secondLikeIconUrl: 'images/ic_favorite.png',
+						secondPostIconUrl: 'images/ic_mode_comment.png',
+						thirdName: 'image upload: ',
+						thirdDate: '11-04-2016',
+						thirdDateTime: '2016-04-11'
+					})
+					@@include('components/main-card.html',{
+						imgUrl: 'images/block7.png',
+						topBtnClass: 'hide',
+						firstDate: 'Today',
+						firstLike: '128',
+						firstPost: '31',
+						firstLikeIconUrl: 'images/ic_favorite.png',
+						firstPostIconUrl: 'images/ic_mode_comment.png',
+						secondDate: '9-08-2016',
+						secondDateTime: '2016-08-09',
+						secondLike: '67',
+						secondPost: '22',
+						secondLikeIconUrl: 'images/ic_favorite.png',
+						secondPostIconUrl: 'images/ic_mode_comment.png',
+						thirdName: 'image upload: ',
+						thirdDate: '11-04-2016',
+						thirdDateTime: '2016-04-11'
+					})
+					@@include('components/main-card.html',{
+						imgUrl: 'images/block8.png',
+						topBtnClass: 'hide',
+						firstDate: 'Today',
+						firstLike: '128',
+						firstPost: '31',
+						firstLikeIconUrl: 'images/ic_favorite.png',
+						firstPostIconUrl: 'images/ic_mode_comment.png',
+						secondDate: '9-08-2016',
+						secondDateTime: '2016-08-09',
+						secondLike: '67',
+						secondPost: '22',
+						secondLikeIconUrl: 'images/ic_favorite.png',
+						secondPostIconUrl: 'images/ic_mode_comment.png',
+						thirdName: 'image upload: ',
+						thirdDate: '11-04-2016',
+						thirdDateTime: '2016-04-11'
+					})
+					@@include('components/main-card.html',{
+						imgUrl: 'images/block9.png',
+						topBtnClass: 'hide',
+						firstDate: 'Today',
+						firstLike: '128',
+						firstPost: '31',
+						firstLikeIconUrl: 'images/ic_favorite.png',
+						firstPostIconUrl: 'images/ic_mode_comment.png',
+						secondDate: '9-08-2016',
+						secondDateTime: '2016-08-09',
+						secondLike: '67',
+						secondPost: '22',
+						secondLikeIconUrl: 'images/ic_favorite.png',
+						secondPostIconUrl: 'images/ic_mode_comment.png',
+						thirdName: 'image upload: ',
+						thirdDate: '11-04-2016',
+						thirdDateTime: '2016-04-11'
+					})
+				</section>
+				<botton class="load-more">load more</botton>
+			</div>
+		</main>
+		<footer></footer>
+	</section>
+	
 
 	<!-- <li>@@include('components/header.html', {name: 'ыыыыыыыыы', class: ';;;;;',})</li> -->
 	 
 	 
 </body>
 <footer></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/main.min.js"></script>
 </html>

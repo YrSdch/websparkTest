@@ -198,10 +198,10 @@ function clean(){
 	return del(path.clearn)
 }
 
-let build = gulp.series(clean, gulp.parallel(fonts, images, js, css, html), fontsStyle)
+let build = gulp.series(clean, gulp.parallel(fonts, images, js, css, html))
 let watch = gulp.parallel(build,watchFile, browserSync)
 
-exports.fontsStyle = fontsStyle
+// exports.fontsStyle = fontsStyle
 exports.fonts = fonts
 exports.images = images
 exports.js = js
