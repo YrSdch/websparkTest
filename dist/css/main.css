@@ -2037,6 +2037,11 @@ main:before {
   display: none;
 }
 
+.main__content.grid-view .main__stats {
+  top: 50%;
+  height: 50%;
+}
+
 .main__content .main__stats-row svg {
   fill: #fff;
 }
@@ -2291,11 +2296,11 @@ main:before {
 }
 
 .main__stats-row:nth-child(1) {
-  margin-bottom: 12px;
+  margin-bottom: 21px;
 }
 
 .main__stats-row:nth-child(2) {
-  margin-bottom: 16px;
+  margin-bottom: 19px;
 }
 
 .main__stats-row picture {
@@ -6199,18 +6204,18 @@ main:before {
   }
 }
 
-@media screen and (min-width: 1610px) {
+@media screen and (min-width: 1600px) {
   .site-top:before {
     content: '';
-    width: 59%;
-    height: 454px;
-    background: url("../images/Shape1.png");
+    width: 1300px;
+    height: 510px;
+    background: url("../images/Shape_1copy.png");
     background-repeat: no-repeat !important;
     background-position: top !important;
     background-size: cover !important;
     position: absolute;
-    left: 0;
-    top: 0px;
+    left: -14%;
+    top: -19px;
     z-index: -1;
   }
 
@@ -6483,7 +6488,7 @@ main:before {
 
 .webp main:before { background: url("../images/Shape 2.png"); }
 
-@media screen and (min-width: 1610px) {
+@media screen and (min-width: 1600px) {
 
-  .webp .site-top:before { background: url(../images/Shape1.webp); }
+  .webp .site-top:before { background: url(../images/Shape_1copy.webp); }
 }
